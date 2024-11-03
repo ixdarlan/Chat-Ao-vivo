@@ -5,10 +5,10 @@ const io = require('socket.io')(server, {cors: {origin: 'http://localhost:5173'}
 const PORT = 5000
 
 io.on('connection', socket => {
-  console.log('UsuÃ¡rio conectado!', socket.id);
+  console.log('Usuário conectado!', socket.id);
 
   socket.on('disconnect', reason => {
-    console.log('UsuÃ¡rio desconectado!', socket.id)
+    console.log('Usuário desconectado!', socket.id)
   })
 
   socket.on('set_username', username => {
