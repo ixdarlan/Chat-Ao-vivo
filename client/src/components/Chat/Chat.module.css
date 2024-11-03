@@ -1,8 +1,7 @@
-
 .chat-container {
   height: 600px;
   width: 400px;
-  background-color: #2e3b2f; /* Verde escuro */
+  background-color: #2e3b2f; 
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
@@ -10,14 +9,14 @@
   padding: 0 10px;
   height: 550px;
   overflow-y: scroll;
-  color: #ffffff; /* Branco para contraste */
+  color: #ffffff;
   display: flex;
   flex-direction: column;
 }
 .message-container {
   max-width: 250px;
   width: fit-content;
-  background-color: #4b5b48; /* Verde mais claro */
+  background-color: #4b5b48; 
   margin-top: 10px;
   padding: 5px 10px;
   border-radius: 7px;
@@ -25,7 +24,7 @@
 }
 .message-mine {
   align-self: end;
-  background-color: #6b8e63; /* Verde ainda mais claro */
+  background-color: #6b8e63;
 }
 .chat-footer {
   width: 100%;
@@ -43,13 +42,13 @@
   margin-top: 5px;
 }
 input {
-  background-color: #2e3b2f; /* Verde escuro para o fundo do input */
-  color: #ffffff; /* Texto branco */
-  border: 1px solid #4b5b48; /* Borda verde claro */
+  background-color: #2e3b2f;
+  color: #ffffff; 
+  border: 1px solid #4b5b48; 
   border-radius: 4px;
   padding: 5px;
   width: 100%;
 }
 input::placeholder {
-  color: #ffffff; /* Placeholder em branco */
+  color: #ffffff; 
 }
