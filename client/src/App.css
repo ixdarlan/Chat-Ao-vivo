@@ -1,7 +1,24 @@
-body{
+
+body {
   height: 100vh;
-  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(to right, #3c6e3c 0%, #5cb85c 100%); /* Gradiente verde escuro */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #4b5b48; /* Verde mais claro para o botão */
+  color: #ffffff; /* Texto branco no botão */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #6b8e63; /* Verde ainda mais claro ao passar o mouse */
+}
+

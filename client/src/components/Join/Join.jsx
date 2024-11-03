@@ -19,7 +19,7 @@ export default function Join({setChatVisibility, setSocket}) {
   return (
     <div className={style['join-container']}>
       <h2>Chat em tempo real</h2>
-      <Input inputRef={usernameRef} placeholder='Nome de usuário' />
+      <Input inputRef={usernameRef} placeholder='Nome de usuario' />
       <Button sx={{mt:2}} onClick={()=>handleSubmit()} variant="contained">Entrar</Button>
     </div>
   )

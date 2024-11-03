@@ -1,40 +1,55 @@
-.chat-container{
+
+.chat-container {
   height: 600px;
   width: 400px;
-  background-color: #fff;
+  background-color: #2e3b2f; /* Verde escuro */
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
-	box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
 }
-.chat-body{
+.chat-body {
   padding: 0 10px;
   height: 550px;
   overflow-y: scroll;
-  color: #000;
+  color: #ffffff; /* Branco para contraste */
   display: flex;
   flex-direction: column;
 }
-
-.message-container{
+.message-container {
   max-width: 250px;
   width: fit-content;
-  background-color: lightgrey;
+  background-color: #4b5b48; /* Verde mais claro */
   margin-top: 10px;
   padding: 5px 10px;
   border-radius: 7px;
   align-self: start;
 }
-
-.message-mine{
+.message-mine {
   align-self: end;
-  background-color: skyblue;
+  background-color: #6b8e63; /* Verde ainda mais claro */
 }
-
-.chat-footer{
+.chat-footer {
   width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
-  display:flex;
+  display: flex;
   align-items: center;
   bottom: 0;
   height: 50px;
+}
+.message-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+input {
+  background-color: #2e3b2f; /* Verde escuro para o fundo do input */
+  color: #ffffff; /* Texto branco */
+  border: 1px solid #4b5b48; /* Borda verde claro */
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+}
+input::placeholder {
+  color: #ffffff; /* Placeholder em branco */
 }
