@@ -1,8 +1,13 @@
 const app = require('express')()
 const server = require('http').createServer(app)
+const bodyParser = require('body-parser');
+const securityRoutes = require('./security');
 const io = require('socket.io')(server, {cors: {origin: 'http://localhost:5173'}})
 
-const PORT = 5000
+app.use(bodyParser.json());
+app.use('/api', securityRoutes);
+
+const PORT = process.env.PORT || 5000;
 
 io.on('connection', socket => {
   console.log('Usuario conectado!', socket.id);
@@ -21,10 +26,17 @@ io.on('connection', socket => {
       text,
       authorId: socket.id,
       author: socket.data.username
-    })
+    })  
   })
 
-  // Novo evento para receber e retransmitir a imagem
+  socket.on('audio', audioData => {
+    io.emit('receive_audio', {
+      audio: audioData,
+      authorId: socket.id,
+      author: socket.data.username,
+    });
+  });
+
   socket.on('send_image', (imageBuffer) => {
     io.emit('receive_message', {
       type: 'image',
@@ -35,4 +47,4 @@ io.on('connection', socket => {
   })
 })
 
-server.listen(PORT, () => console.log('Server running...'))
+server.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`))

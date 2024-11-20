@@ -41,6 +41,9 @@
   border-radius: 8px;
   margin-top: 5px;
 }
+.message-audio {
+  margin-top: 10px;
+}
 input {
   background-color: #2e3b2f;
   color: #ffffff; 
